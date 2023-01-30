@@ -19,19 +19,19 @@ time.sleep (secs)
 x = 0
 a = 0
 
-print ("\n\nWelcome - InfoTech Center 4.0")
+print ("\n\n\033[31mWelcome - InfoTech Center 4.0")
 
 time.sleep (2)
 print (" ")
 while x != 20:
     x += 1
-    b = ("Operation Fury OS is Loading " + "." * a)
+    b = ("\033[31mDeclaration of Independance OS is Loading " + "." * a)
     a = a + 1
     sys.stdout.write('\r'+b) # \r prints a carriage return first, so `b` is printed on top of the previous line.
     time.sleep(0.5)
     if a == 4:
         a = 0
     if x == 20:
-        print(' Done')
+        print('\nDone')
 
 
