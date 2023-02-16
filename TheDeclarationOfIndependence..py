@@ -14,6 +14,9 @@ import sys
 import random
 from time import sleep
 
+t = time.localtime()
+current_time = time.strftime("%H:%M:%S", t)
+print(current_time)
 
 # I imported the system library for further use in code.
 
@@ -28,18 +31,19 @@ a = 0
 #print ("\n\n\033[31mWelcome - InfoTech Center 4.0")
 
 time.sleep (2)
-print (" ")
 while x != 20:
     x += 1
-    b = ("\033[31mDeclaration of Independance OS is Loading " + "." * a)
+    b = ("Declaration of Independance OS is Loading " + "." * a)
     a = a + 1
     sys.stdout.write('\r'+b) # \r prints a carriage return first, so `b` is printed on top of the previous line.
     time.sleep(0.1)
     if a == 4:
         a = 0
     if x == 20:
-        print('\nDone\n')
+        print('\nDone\n\n')
+        
 
+        
 # Programmer: Brayden Scheffers
 # Date: 2.6.2023
 # Merged Welcome Screen and Gasoline Branches - Stable
@@ -89,25 +93,25 @@ def gasLevelAlert():
     milesToGasStationLow = round(random.uniform(1,25),2)
     milesToGasStationQuarter = round(random.uniform(26,50),2)
     if gasLevelIndicator == "Empty":
-        print("\n***WARNING YOUR VEHICLE IS EMPTY***")
+        print("***WARNING YOUR VEHICLE IS EMPTY***")
         sleep(1)
         print("Calling Emergency Contact")
     elif gasLevelIndicator == "Low":
-        print("\n***WARNING***")
+        print("***WARNING***")
         sleep(1)
         print("Your gas tank is depleting, checking for closest gas station.")
         sleep(1)
         print("The closest gas station is",listOfGasStations(),"which is",milesToGasStationLow, "miles away.")
     elif gasLevelIndicator == "Quarter":
-        print("\n***WARNING***")
+        print("***WARNING***")
         sleep(1)
         print("Your tank is at a Quarter, and the closest Gas Station is",listOfGasStations(),"which is",milesToGasStationQuarter, "miles away.")
     elif gasLevelIndicator == "Half":
-        print("\nYour Gas Tank is Half full")
+        print("Your Gas Tank is Half full")
     elif gasLevelIndicator == "Three Quarter":
-        print("\nYour Gas Tank is at Three Quarters, you have enough Gas to travel today.")
+        print("Your Gas Tank is at Three Quarters, you have enough Gas to travel today.")
     else:
-        print("\nYou Gas Tank is Full, you have enough Gas to travel today.")
+        print("You Gas Tank is Full, you have enough Gas to travel today.")
 
 
 # Programmer: Brayden Scheffers
@@ -126,28 +130,46 @@ weatherAlert = weather()
 # VRS function to respond to the weather conditions 
 def vRS():
     if weatherAlert == "Snow":
-        print ("\nNational Weather Service has changed your Alarm by 15 minuites due to the harsh conditions and weather forecast of", weatherAlert)
+        print ("National Weather Service has changed your Alarm by 15 minuites due to the harsh conditions and weather forecast of", weatherAlert,"\n")
         print ("VRS has been engaged, only allowing your vecihle to travel at 45 MPH")
     elif weatherAlert == "Blizzard":
-        print ("\nNational Weather Service has changed your Alarm by 35 minuites due to the harsh conditions and weather forecast of", weatherAlert)
+        print ("National Weather Service has changed your Alarm by 35 minuites due to the harsh conditions and weather forecast of", weatherAlert,"\n")
         print ("VRS has been engaged, only allowing your vecihle to travel at 30 MPH")
     elif weatherAlert == "Rain":
-        print ("\nNational Weather Service is recommending slower speeds and more caution, due to the harsh conditions and weather forecast of", weatherAlert)
+        print ("National Weather Service is recommending slower speeds and more caution, due to the harsh conditions and weather forecast of", weatherAlert,"\n")
     elif weatherAlert == "Fog":
-        print ("\nNational Weather Service is recommending slower speeds and more caution, due to the harsh conditions, reduced vision and a weather forecast of", weatherAlert)
+        print ("National Weather Service is recommending slower speeds and more caution, due to the harsh conditions, reduced vision and a weather forecast of", weatherAlert,"\n")
     elif weatherAlert == "Wind":
-        print ("\nNational Weather Service is recommending slower speeds and more caution, due to the harsh conditions, reduced vision and a weather forecast of", weatherAlert)  
+        print ("National Weather Service is recommending slower speeds and more caution, due to the harsh conditions, reduced vision and a weather forecast of", weatherAlert,"\n")  
     elif weatherAlert == "Ice":
-        print ("\nNational Weather Service has changed your Alarm by 20 minuites and is recommending slower speeds and more caution, due to the harsh conditions, reduced traction and a weather forecast of", weatherAlert)        
-        print ("VRS has been engaged, only allowing your vecihle to travel at 30 MPH")      
+        print ("National Weather Service has changed your Alarm by 20 minuites and is recommending slower speeds and more caution, due to the harsh conditions, reduced traction and a weather forecast of", weatherAlert)        
+        print ("VRS has been engaged, only allowing your vecihle to travel at 30 MPH\n")      
     else:
-        print ("\nThe weather is", weatherAlert,", although there are no harsh weather conditions, still drive safely and responsibily.")       
+        print ("The weather is", weatherAlert,", although there are no harsh weather conditions, still drive safely and responsibily.\n")       
     
 # Call Function Here  
-print ("National Weather Service is checking conditions . . .")
+while x != 30:
+    x += 1
+    b = ("National Weather Service is checking conditions " + "." * a)
+    a = a + 1
+    sys.stdout.write('\r'+b) # \r prints a carriage return first, so `b` is printed on top of the previous line.
+    time.sleep(0.1)
+    if a == 4:
+        a = 0
+    if x == 30:
+        print('\n')
 sleep (1)
 vRS()
-print ("\nChecking current gas levels . . . ")
+while x != 40:
+    x += 1
+    b = ("Checking Gas Levels " + "." * a)
+    a = a + 1
+    sys.stdout.write('\r'+b) # \r prints a carriage return first, so `b` is printed on top of the previous line.
+    time.sleep(0.1)
+    if a == 4:
+        a = 0
+    if x == 40:
+        print('\n')
+        
 sleep (1)
 gasLevelAlert()
-
