@@ -7,7 +7,15 @@ Our Welcome Screen will start our Program letting
 drivers know that the InfoTech Center 4.0 OS is loading.
 
 """
-
+"""
+-Add Alert System for weather and time
+-User Input for checking car systems (batteries, tires pressure, oil, etc ... ) 
+    -(Y/N)
+    -Numerical (1,2,3,etc ...) user input / interface
+    -Y/N for basal checking
+    -Numerical System for more that 1-2 option(s) 
+        -Eventual leading from N(Y/N) or (2) would lead to no content, just a basal message that does not convey an system error 
+"""
 # Import Libraries Here
 import time
 import sys
