@@ -14,10 +14,6 @@ import sys
 import random
 from time import sleep
 
-t = time.localtime()
-current_time = time.strftime("%H:%M:%S", t)
-print(current_time)
-
 # I imported the system library for further use in code.
 
 """
@@ -42,8 +38,19 @@ while x != 20:
     if x == 20:
         print('\nDone\n\n')
         
+sleep (1)
+    
+t = time.localtime()
+current_time = time.strftime("%H:%M:%S", t)
+print(current_time)
+    
+sleep (1)    
 
-        
+if current_time >= "18:00:00":
+    print ("Your headlights have been automatically turned on and your speed has been limited to 45 MPH, due to limited vison.\n")
+elif current_time <= "06:00:00":
+    print ("Your headlights have been automatically turned on and your speed has been limited to 45 MPH, due to limited vison.\n")
+
 # Programmer: Brayden Scheffers
 # Date: 2.6.2023
 # Merged Welcome Screen and Gasoline Branches - Stable
