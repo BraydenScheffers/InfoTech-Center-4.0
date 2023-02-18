@@ -243,7 +243,7 @@ elif part_choice == "4":
     if user_sleep <= "2":
         print ("We advise you to not drive, due to exhaustion.")
     elif user_sleep <"6":
-        print ("we advise against driving in dangerous areas, your speed limit has been limited by 5 MPH")
+        print ("We advise against driving in dangerous areas, your speed limit has been limited by 5 MPH")
     else:
         print ("You may drive as normal.")
         
