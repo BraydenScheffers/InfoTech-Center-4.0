@@ -5,7 +5,6 @@
 """
 Our Welcome Screen will start our Program letting
 drivers know that the InfoTech Center 4.0 OS is loading.
-
 """
 
 # Import Libraries Here
@@ -70,7 +69,6 @@ We will create a Function that will tell us our Fuel Gauge level
 Create a Function to determine our closest Gas Station
     -Create a List of Gas Stations
     -Randomly choose a Gas Station from the List
-
     Create a Function to determine our Gas Level and closest Gas Station
     -Print Gas Level
     -Print Closest Gas Station
@@ -180,3 +178,74 @@ while x != 40:
         
 sleep (1)
 gasLevelAlert()
+
+sleep (1)
+print ("\n")
+
+def check_engine():
+    engine_problems = ["spark plugs", "low oil pressure", "overheating engine", "oxygen sensor"]
+    print("Engine problem:", random.choice(engine_problems))
+
+def check_transmission():
+    transmission_problems = ["slipping transmission", "delayed engagement", "overheating transmission", "fluid leaks"]
+    print("Transmission problem: ", random.choice(transmission_problems))
+
+def check_brakes():
+    brake_problems = ["squeaky brakes", "Bad brake pedal", "low brake fluid"]
+    print("Brake problem: ", random.choice(brake_problems))
+
+print("Which part of the vehicle(or driver) would you like to check?")
+print("1. Engine")
+print("2. Transmission")
+print("3. Brakes")
+print("4. User Sleep")
+part_choice = input("Enter your choice (1, 2, 3, or 4): ")
+
+if part_choice == "1":
+    while x != 50:
+        x += 1
+        b = ("Checking engine " + "." * a)
+        a = a + 1
+        sys.stdout.write('\r'+b) # \r prints a carriage return first, so `b` is printed on top of the previous line.
+        time.sleep(0.1)
+        if a == 4:
+            a = 0
+        if x == 50:
+            print('\n')
+    check_engine()
+    
+elif part_choice == "2":
+    while x != 60:
+        x += 1
+        b = ("Checking transmission " + "." * a)
+        a = a + 1
+        sys.stdout.write('\r'+b) # \r prints a carriage return first, so `b` is printed on top of the previous line.
+        time.sleep(0.1)
+        if a == 4:
+            a = 0
+        if x == 60:
+            print('\n')
+    check_transmission()
+elif part_choice == "3":
+    while x != 70:
+        x += 1
+        b = ("Checking brakes " + "." * a)
+        a = a + 1
+        sys.stdout.write('\r'+b) # \r prints a carriage return first, so `b` is printed on top of the previous line.
+        time.sleep(0.1)
+        if a == 4:
+            a = 0
+        if x == 70:
+            print('\n')
+    check_brakes()
+elif part_choice == "4":
+    user_sleep = input("How much sleep did you get? (number) ")
+    if user_sleep <= "2":
+        print ("We advise you to not drive, due to exhaustion.")
+    elif user_sleep <"6":
+        print ("we advise against driving in dangerous areas, your speed limit has been limited by 5 MPH")
+    else:
+        print ("You may drive as normal.")
+        
+else:
+    print("Invalid choice. Please enter 1, 2, 3, or 4.")
