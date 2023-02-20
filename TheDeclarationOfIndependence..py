@@ -183,15 +183,15 @@ sleep (1)
 print ("\n")
 
 def check_engine():
-    engine_problems = ["spark plugs", "low oil pressure", "overheating engine", "oxygen sensor"]
+    engine_problems = ["spark plugs", "low oil pressure", "overheating engine", "oxygen sensor", "No Engine Problems"]
     print("Engine problem:", random.choice(engine_problems))
 
 def check_transmission():
-    transmission_problems = ["slipping transmission", "delayed engagement", "overheating transmission", "fluid leaks"]
+    transmission_problems = ["slipping transmission", "delayed engagement", "overheating transmission", "fluid leaks", "No Transmission Problems"]
     print("Transmission problem: ", random.choice(transmission_problems))
 
 def check_brakes():
-    brake_problems = ["squeaky brakes", "Bad brake pedal", "low brake fluid"]
+    brake_problems = ["squeaky brakes", "Bad brake pedal", "low brake fluid", "No Brake Problems"]
     print("Brake problem: ", random.choice(brake_problems))
 
 print("Which part of the vehicle(or driver) would you like to check?")
